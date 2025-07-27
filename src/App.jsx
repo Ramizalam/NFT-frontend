@@ -15,9 +15,8 @@ function App() {
     <div className="min-h-screen bg-neutral-900">
       <Navbar />
       
-      
       {/* Main Content Container with Border */}
-      <div className="max-w-7xl mx-auto px-6 py-8 relative">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 py-4 sm:py-8 relative">
         {/* Cat ears on top of the border */}
         <div className="flex justify-center space-x-100 items-center absolute -top-11 left-1/2 transform -translate-x-1/2 z-[-1px]">
           <img src={catleft} alt="Cat Ears" className="w-9 h-32" />
@@ -25,12 +24,12 @@ function App() {
           <img src={catright} alt="Cat Ears" className="w-9 h-32" />
         </div>
        
-        <div className="border-2 border-yellow-200/30 rounded-3xl p-8 bg-neutral-900/50 backdrop-blur-sm">
+        <div className="border-2 border-yellow-200/30 rounded-3xl p-4 sm:p-8 bg-neutral-900/50 backdrop-blur-sm">
           <Hero />
           <RiskMeter />
           
           {/* Main Content Grid */}
-          <div className="flex gap-6 justify-center mt-8">
+          <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center mt-4 sm:mt-8">
             <AssetsPanel />
             <PositionsPanel />
           </div>
@@ -38,8 +37,8 @@ function App() {
       </div>
 
       {/* FAQ and Sidebar - Outside the border */}
-      <div className="max-w-7xl mx-auto px-6 pb-8">
-        <div className="flex gap-6 justify-center mt-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 pb-4 sm:pb-8">
+        <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center mt-4 sm:mt-8">
           <FAQ />
           <Sidebar />
         </div>

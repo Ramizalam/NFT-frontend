@@ -25,11 +25,11 @@ export default function AssetsPanel() {
   );
 
   return (
-    <section className="bg-neutral-800 rounded-2xl  py-1 min-w-[320px] max-w-[360px] shadow-lg">
+    <section className="bg-neutral-800 rounded-2xl p-2 min-w-[320px] max-w-[360px] shadow-lg">
       {/* Main Tabs */}
-      <div className="flex  ">
+      <div className="flex">
         <button 
-          className={`px-4 py-2 text-base  rounded-xl transition-all w-full mr-2 border-1 border-white ${
+          className={`px-4 py-2 text-base font-semibold rounded-xl transition-all w-full mr-2 border-1 border-white ${
             activeTab === 'Borrowing Rate' 
               ? 'bg-black text-white' 
               : 'bg-neutral-700 text-white'
@@ -39,7 +39,7 @@ export default function AssetsPanel() {
           Borrowing Rate
         </button>
         <button 
-          className={`px-4 py-2 text-base  rounded-xl transition-all w-full border-1 border-white ${
+          className={`px-4 py-2 text-base font-semibold rounded-xl transition-all w-full border-1 border-white ${
             activeTab === 'Your Assets' 
               ? 'bg-black text-white' 
               : 'bg-neutral-700 text-white'
@@ -61,7 +61,7 @@ export default function AssetsPanel() {
         </div>
         
         {/* Search and Filter Row */}
-        <div className="flex gap-2 px-1">
+        <div className="flex gap-2">
           <div className="flex-1 relative">
             <input 
               placeholder="Search by token or protocol" 
@@ -69,9 +69,9 @@ export default function AssetsPanel() {
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
             />
-            <span className="absolute left-2 top-1/2 transform -translate-y-1/2 text-white">🔍</span>
+            <span className="absolute left-2 top-1/2 transform -translate-y-1/2 text-gray-500">🔍</span>
           </div>
-          <div className="flex gap-1 bg-black rounded-3xl px-2  items-center">
+          <div className="flex gap-1 bg-black rounded-3xl px-2 items-center">
             <button className="text-white px-2 py-1 text-xs flex items-center gap-1">
               Filter by 
             </button>
@@ -82,7 +82,7 @@ export default function AssetsPanel() {
         </div>
 
         {/* Asset List Header */}
-        <div className="flex justify-between py-2 text-sm font-semibold text-black ">
+        <div className="flex justify-between py-2 text-sm font-semibold text-black">
           <span>Asset</span>
           <span className="flex items-center gap-1">
             Borrow APR <span> <img src={Vector} alt="Vector" className="w-4 h-4" /> </span>
